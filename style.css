@@ -1,0 +1,137 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #050816;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  border: none;
+  background: gold;
+  color: black;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  transform: scale(1.05);
+}
+
+/* FLOATING BACKGROUND */
+body::before {
+  content: "";
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 150, 255, 0.2) 0%, transparent 70%);
+  animation: moveBg 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes moveBg {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-25%, -25%);
+  }
+}
+
+/* CHAT BUTTON */
+.chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: gold;
+  color: black;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+/* CHAT BOX */
+.chat-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background: #0a0f2c;
+  border-radius: 10px;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* CHAT HEADER */
+.chat-header {
+  background: gold;
+  color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* MESSAGES */
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.user {
+  text-align: right;
+  margin: 5px 0;
+}
+
+.ai {
+  text-align: left;
+  margin: 5px 0;
+}
+
+/* INPUT */
+.chat-input {
+  display: flex;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.chat-input button {
+  padding: 10px;
+  border: none;
+  background: gold;
+  cursor: pointer;
+}
