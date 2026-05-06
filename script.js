@@ -33,10 +33,12 @@ async function sendChat() {
 
   try {
     const res = await fetch("/api/chat", {
-      method: "POST",
-      body: JSON.stringify({ message: text })
-    });
-
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ message: text })
+});
     const data = await res.json();
 
     addMessage("ai", data.reply);
