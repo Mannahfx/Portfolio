@@ -32,7 +32,7 @@ async function sendChat() {
   input.value = "";
 
   try {
-    const res = await fetch("/.netlify/functions/chat", {
+    const res = await fetch("/api/chat", {
       method: "POST",
       body: JSON.stringify({ message: text })
     });
