@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MANNA | Intelligent Fintech & Agritech System Engineers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MANNA engineers state-of-the-art, high-traction algorithmic fintech engines and intelligent precision agritech networks powered by autonomous systems.">
+  
+  <!-- CSS STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BACKGROUND GLOW EFFECTS -->
+  <div class="bg-glow-container">
+    <div class="glow-fintech"></div>
+    <div class="glow-agritech"></div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <!-- Leaf + Digital Nodes Hybrid Logo SVG -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        MANNA
+      </a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#simulator">Simulator Sandbox</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="nav-btn" onclick="scrollToContact()">Consultation</button>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero container">
+    <div class="badge-tag">
+      <span class="pulse-dot fintech-pulse"></span>
+      INTELLIGENT SYSTEM AUTOMATION
+    </div>
+    
+    <h1>
+      Engineering Smarter Systems For <br>
+      <span class="gradient-fintech">High-Frequency Fintech</span> & 
+      <span class="gradient-agritech">Precision Agritech</span>
+    </h1>
+    
+    <p>
+      We build enterprise-grade trading engines, real-time risk trackers, and cloud-connected agricultural IoT sensors powered by machine intelligence.
+    </p>
+    
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="scrollToSimulator()">
+        Try Live Simulator
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+      </button>
+      <button class="btn-secondary" onclick="toggleChat()">Talk to MANNA AI</button>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services container">
+    <div class="section-title-wrap">
+      <div class="section-subtitle">Our Specializations</div>
+      <h2 class="section-title">What We Build</h2>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Fintech Services Card -->
+      <div class="glass-card service-card fintech">
+        <div class="service-icon">
+          <!-- Fintech Icon SVG (Trend Graph / Node Grid) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <h3>Fintech Automation</h3>
+        <p>
+          We construct secure, sub-millisecond execution pipelines tailored for financial institutions requiring lightning-fast transaction management, trend analysis, and liquidity control.
+        </p>
+        <ul class="service-features">
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            High-Frequency Algorithmic Cores
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Automated Risk and Margin Guards
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            High-Throughput Ledger Systems
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Predictive Market Trend Models
+          </li>
+        </ul>
+      </div>
+
+      <!-- Agritech Services Card -->
+      <div class="glass-card service-card agritech">
+        <div class="service-icon">
+          <!-- Agritech Icon SVG (Leaf / Plant Node) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <path d="M12 8v8"></path>
+            <path d="M8 12h8"></path>
+          </svg>
+        </div>
+        <h3>Precision Agritech</h3>
+        <p>
+          We build integrated hardware and analytics software enabling commercial farms to automate irrigation cycles, monitor crop stress, and run predictive forecasting models.
+        </p>
+        <ul class="service-features">
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            LoRaWAN Sensor Array Networks
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Automated Hydro & Moisture Valves
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Multi-spectral Drone Crop Imagery
+          </li>
+          <li>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            IoT Supply Chain Traceability
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SIMULATOR SECTION -->
+  <section id="simulator" class="sandbox container">
+    <div class="section-title-wrap">
+      <div class="section-subtitle">Experience Our Technology</div>
+      <h2 class="section-title">The System Sandbox</h2>
+    </div>
+
+    <!-- TABS TO SWITCH SIMULATORS -->
+    <div class="sandbox-tabs">
+      <button class="tab-btn active fintech-tab" onclick="switchTab('fintech')">Fintech Algo Engine</button>
+      <button class="tab-btn agritech-tab" onclick="switchTab('agritech')">Agritech Precision IoT</button>
+    </div>
+
+    <!-- FINTECH ENGINE SIMULATION -->
+    <div id="fintech-sandbox" class="sandbox-content active">
+      <div class="sandbox-grid">
+        
+        <!-- Live Trading Screen -->
+        <div class="simulator-screen">
+          <div class="screen-header">
+            <div class="screen-title">
+              <span class="pulse-dot fintech-pulse"></span>
+              CORE.HFT_ENGINE.v4.1 // LIVE RUN
+            </div>
+            <div class="screen-title" style="color: var(--fintech-primary); font-weight: 700;">
+              SYS: SECURE
+            </div>
+          </div>
+          
+          <div class="screen-body">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-label">Stock Price ($)</div>
+                <div class="stat-val fintech-val" id="fintech-price">2,450.80</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Engaged Strategy</div>
+                <div class="stat-val fintech-val" id="fintech-strategy" style="font-size: 0.95rem; margin-top: 5px;">MOMENTUM_AI</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Latency (ms)</div>
+                <div class="stat-val fintech-val" id="fintech-latency">1.18</div>
+              </div>
+            </div>
+            
+            <!-- Fluctuation SVG bar simulator -->
+            <div class="visual-chart-box" id="fintech-chart">
+              <div class="chart-bar" style="height: 60%;"></div>
+              <div class="chart-bar" style="height: 40%;"></div>
+              <div class="chart-bar" style="height: 75%;"></div>
+              <div class="chart-bar" style="height: 50%;"></div>
+              <div class="chart-bar" style="height: 90%;"></div>
+              <div class="chart-bar" style="height: 65%;"></div>
+              <div class="chart-bar" style="height: 80%;"></div>
+              <div class="chart-bar" style="height: 45%;"></div>
+              <div class="chart-bar" style="height: 70%;"></div>
+              <div class="chart-bar" style="height: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandbox Panel -->
+        <div class="simulator-panel">
+          <div class="glass-card panel-card">
+            <h4>Algorithm Operations</h4>
+            <p>Alter simulated market variables to evaluate how our algorithmic risk engines respond dynamically.</p>
+            
+            <div class="control-btn-group">
+              <button class="control-btn fintech-ctrl" onclick="triggerVolatility()">Trigger Market Volatility</button>
+              <button class="control-btn fintech-ctrl" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: white;" onclick="toggleStrategy()">Cycle Strategy Pattern</button>
+            </div>
+          </div>
+
+          <div class="glass-card panel-card" style="padding: 18px;">
+            <div class="log-console" id="fintech-logs">
+              <div class="log-line"><span>[00:01:00]</span> INITIALIZING MANNA HIGH-FREQUENCY CORE...</div>
+              <div class="log-line"><span>[00:01:02]</span> RISK THRESHOLDS LOADED. STATUS: OK.</div>
+              <div class="log-line"><span>[00:01:04]</span> LISTENING ON DIRECT MARKET LIQUIDITY FEED...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGRITECH PRECISION IOT SIMULATION -->
+    <div id="agritech-sandbox" class="sandbox-content">
+      <div class="sandbox-grid">
+        
+        <!-- Live IoT Grid Screen -->
+        <div class="simulator-screen">
+          <div class="screen-header">
+            <div class="screen-title">
+              <span class="pulse-dot agritech-pulse"></span>
+              NODE_GATEWAY.087 // FIELD UNIT
+            </div>
+            <div class="screen-title" style="color: var(--agritech-primary); font-weight: 700;">
+              VALVE: CLOSED
+            </div>
+          </div>
+          
+          <div class="screen-body">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-label">Soil Moisture (%)</div>
+                <div class="stat-val agritech-val" id="agritech-moisture">34%</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Irrigation Valve</div>
+                <div class="stat-val agritech-val" id="agritech-valve-status">IDLE</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-label">Telemetry (dBm)</div>
+                <div class="stat-val agritech-val" id="agritech-telemetry">-88dBm</div>
+              </div>
+            </div>
+            
+            <!-- Grid of 9 micro-sensors -->
+            <div class="visual-chart-box" style="height: auto; align-items: stretch;" id="agritech-grid">
+              <div class="field-grid">
+                <div class="field-cell">
+                  <div class="cell-icon agritech-cell-icon">
+                    💧
+                  </div>
+                  <div class="cell-status">Moisture</div>
+                  <div class="cell-action-light active"></div>
+                </div>
+                <div class="field-cell">
+                  <div class="cell-icon agritech-cell-icon">
+                    🌡️
+                  </div>
+                  <div class="cell-status">Temp: 26°</div>
+                  <div class="cell-action-light"></div>
+                </div>
+                <div class="field-cell" id="valve-cell">
+                  <div class="cell-icon agritech-cell-icon" id="valve-icon" style="transition: transform 0.5s;">
+                    ⚙️
+                  </div>
+                  <div class="cell-status">Water Valve</div>
+                  <div class="cell-action-light" id="valve-light"></div>
+                </div>
+                <div class="field-cell">
+                  <div class="cell-icon agritech-cell-icon">
+                    ☀️
+                  </div>
+                  <div class="cell-status">Solar: 92%</div>
+                  <div class="cell-action-light active"></div>
+                </div>
+                <div class="field-cell" id="drone-cell">
+                  <div class="cell-icon agritech-cell-icon" id="drone-icon">
+                    🛸
+                  </div>
+                  <div class="cell-status">Drone Link</div>
+                  <div class="cell-action-light" id="drone-light"></div>
+                </div>
+                <div class="field-cell">
+                  <div class="cell-icon agritech-cell-icon">
+                    🔋
+                  </div>
+                  <div class="cell-status">Battery: 98%</div>
+                  <div class="cell-action-light"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sandbox Panel -->
+        <div class="simulator-panel">
+          <div class="glass-card panel-card">
+            <h4>Precision Operations</h4>
+            <p>Manually trigger valve actuators or dispatch autonomous monitoring drone sequences.</p>
+            
+            <div class="control-btn-group">
+              <button class="control-btn agritech-ctrl" id="irrigation-toggle-btn" onclick="toggleIrrigation()">Trigger Sprinklers (10s)</button>
+              <button class="control-btn agritech-ctrl" style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: white;" id="drone-btn" onclick="dispatchDroneScan()">Dispatch Canopy Scan</button>
+            </div>
+          </div>
+
+          <div class="glass-card panel-card" style="padding: 18px;">
+            <div class="log-console agritech-log" id="agritech-logs">
+              <div class="log-line"><span>[08:00:00]</span> HUB GATEWAY ONLINE via LORAWAN...</div>
+              <div class="log-line"><span>[08:00:02]</span> POLLING FIELD NODES. CHANNELS: 6/6 OK.</div>
+              <div class="log-line"><span>[08:00:05]</span> TEMP: 26.2°C, SOIL MOISTURE ACCUMULATING...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / PROCESS SECTION -->
+  <section id="process" class="process container">
+    <div class="section-title-wrap">
+      <div class="section-subtitle">How We Work</div>
+      <h2 class="section-title">The Engineering Path</h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="glass-card process-card">
+        <div class="process-step">01</div>
+        <h4>Model & Spec</h4>
+        <p>We analyze the customer’s parameters—whether market liquidity depths or farmland topology—to specify optimal hardware layout and code parameters.</p>
+      </div>
+
+      <div class="glass-card process-card">
+        <div class="process-step">02</div>
+        <h4>Architecture</h4>
+        <p>Systems are designed around high concurrency principles. We use fast interfaces and secure layers to ensure data is processed with minimum loss.</p>
+      </div>
+
+      <div class="glass-card process-card">
+        <div class="process-step">03</div>
+        <h4>Integration</h4>
+        <p>We deploy microcontrollers onto physical rigs, configure custom cloud tunnels, and link transaction APIs directly to decision networks.</p>
+      </div>
+
+      <div class="glass-card process-card">
+        <div class="process-step">04</div>
+        <h4>AI Orchestration</h4>
+        <p>Custom models monitor outputs and automatically run optimizations (e.g. executing risk trades or scheduling precise sprinkler water release).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact container">
+    <div class="contact-layout">
+      <div class="contact-info">
+        <div class="section-subtitle" style="text-align: left;">Let's Talk Automation</div>
+        <h3>Request System Assessment</h3>
+        <p>
+          Discuss your infrastructure roadmap with our lead automated-systems designers. We provide specialized consulting on low-latency trading integrations and scale agriculture IoT setups.
+        </p>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <div class="info-details">
+            <h5>Email Support</h5>
+            <p>systems@manna.io</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <div class="info-details">
+            <h5>HQ Base</h5>
+            <p>Tech Hub Sector 4, Silicon Valley</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-card contact-form-wrap">
+        <form id="portfolio-contact-form" onsubmit="handleContactSubmit(event)">
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="user-name">Full Name</label>
+              <input type="text" id="user-name" required placeholder="e.g. Sarah Connor">
+            </div>
+            <div class="form-group">
+              <label for="user-email">Business Email</label>
+              <input type="email" id="user-email" required placeholder="e.g. sarah@cyberdyne.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="system-interest">Target System Category</label>
+            <select id="system-interest" required>
+              <option value="" disabled selected>Select category...</option>
+              <option value="fintech">High-Frequency Fintech Systems</option>
+              <option value="agritech">Precision Agritech Networks</option>
+              <option value="hybrid">Hybrid / Enterprise Cloud Integration</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="user-msg">Scope Description</label>
+            <textarea id="user-msg" rows="4" required placeholder="Describe your data/system volume..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Request Consultation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer container">
+    <p>&copy; 2026 MANNA AI Inc. All systems automated. Designed for premium high-traction portfolios.</p>
+  </footer>
+
+  <!-- CHAT TRIGGER BUTTON -->
+  <div class="chat-toggle" onclick="toggleChat()">
+    <!-- Message Bubble Icon -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </div>
+
+  <!-- FLOATING CHAT BOX -->
+  <div class="chat-box" id="chat-box-container">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">
+          <!-- CPU/Terminal Spark Icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+            <rect x="9" y="9" width="6" height="6"></rect>
+            <line x1="9" y1="1" x2="9" y2="4"></line>
+            <line x1="15" y1="1" x2="15" y2="4"></line>
+            <line x1="9" y1="20" x2="9" y2="23"></line>
+            <line x1="15" y1="20" x2="15" y2="23"></line>
+            <line x1="20" y1="9" x2="23" y2="9"></line>
+            <line x1="20" y1="15" x2="23" y2="15"></line>
+            <line x1="1" y1="9" x2="4" y2="9"></line>
+            <line x1="1" y1="15" x2="4" y2="15"></line>
+          </svg>
+        </div>
+        <div class="chat-title-wrap">
+          <h4>MANNA System AI</h4>
+          <div class="chat-status">
+            <span></span>Online & Ready
+          </div>
+        </div>
+      </div>
+      <button class="chat-close-btn" onclick="toggleChat()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scrolling Messages -->
+    <div class="chat-messages" id="chat-box">
+      <div class="msg-wrap ai">
+        <div class="msg-avatar">🤖</div>
+        <div class="msg-bubble">Hello! I am the MANNA System Assistant. Ask me how we design our algorithmic trading blocks, how soil IoT telemetry feeds operate, or how we model transaction safety.</div>
+      </div>
+    </div>
+
+    <!-- Quick Prompt Chips -->
+    <div class="chat-chips-container">
+      <button class="chip-btn" onclick="applySuggestion('Explain your HFT algorithm trading')">Explain HFT core</button>
+      <button class="chip-btn" onclick="applySuggestion('How do Agritech soil IoT sensors work?')">Soil IoT sensors</button>
+      <button class="chip-btn" onclick="applySuggestion('What is the timeline of custom setups?')">Consulting process</button>
+    </div>
+
+    <!-- Message Input -->
+    <div class="chat-input">
+      <input id="chat-input" placeholder="Query system capabilities..." />
+      <button class="chat-send-btn" onclick="sendChat()">
+        <!-- Send Icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
