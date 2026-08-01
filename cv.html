@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oluwayinka Olayinka Paul - CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #0a192f;
+            --accent-teal: #06b6d4;
+            --text-dark: #111827;
+            --text-gray: #4b5563;
+            --bg-light: #f3f4f6;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        .no-print-header {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .no-print-header a, .no-print-header button {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .no-print-header a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .no-print-header button {
+            background-color: var(--accent-teal);
+            border: none;
+            cursor: pointer;
+        }
+
+        .no-print-header button:hover {
+            background-color: #0891b2;
+        }
+
+        .a4-container {
+            width: 210mm;
+            min-height: 297mm;
+            background-color: var(--white);
+            margin: 2rem auto;
+            padding: 20mm;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        header.cv-header {
+            border-bottom: 3px solid var(--primary-navy);
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cv-header h1 {
+            color: var(--primary-navy);
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info span::before {
+            content: "•";
+            color: var(--accent-teal);
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        .contact-info span:first-child::before {
+            display: none;
+        }
+        
+        .contact-info a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            color: var(--accent-teal);
+        }
+
+
+        section {
+            margin-bottom: 1.5rem;
+        }
+
+        h2.section-title {
+            color: var(--primary-navy);
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-teal);
+        }
+
+        .objective {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            text-align: justify;
+        }
+
+        .item {
+            margin-bottom: 1rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-title {
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+
+        .item-subtitle {
+            font-weight: 500;
+            color: var(--accent-teal);
+            font-size: 0.95rem;
+        }
+
+        .item-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            font-style: italic;
+        }
+
+        .item ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+
+        .item ul li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .item ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .skill-item strong {
+            color: var(--text-dark);
+            margin-right: 0.5rem;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                background-color: var(--white);
+            }
+            .no-print-header {
+                display: none !important;
+            }
+            .a4-container {
+                margin: 0;
+                padding: 15mm 20mm;
+                box-shadow: none;
+                width: 100%;
+                min-height: auto;
+            }
+            .cv-header h1 {
+                font-size: 2.2rem;
+            }
+            section {
+                margin-bottom: 1.25rem;
+            }
+            /* Avoid page breaks inside items */
+            .item, h2.section-title, .skills-grid {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="no-print-header">
+        <a href="index.html">← Back to Portfolio</a>
+        <button onclick="window.print()">Download / Print CV</button>
+    </div>
+
+    <div class="a4-container">
+        <header class="cv-header">
+            <h1>Oluwayinka Olayinka Paul</h1>
+            <div class="contact-info">
+                <span>08101773538, 07016172429</span>
+                <span><a href="mailto:paulescapemeetings@gmail.com">paulescapemeetings@gmail.com</a></span>
+                <span>Ogun State, Nigeria</span>
+                <span><a href="https://www.linkedin.com/in/oluwayinka-olayinka-b047b7289" target="_blank">linkedin.com/in/oluwayinka-olayinka-b047b7289</a></span>
+                <span>DOB: April 4, 2005</span>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Objective</h2>
+            <p class="objective">Innovative Mechatronics Engineering student at the Federal University of Agriculture, Abeokuta. Passionate about robotics, automation, and artificial intelligence. Skilled in microcontroller programming, AI/ML, and electrical systems with hands-on project experience in circuit design, control systems, and data science. Seeking opportunities to apply technical knowledge in real-world engineering challenges.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">B.Sc. Mechatronics Engineering</span>
+                    <span class="item-meta">2023 – Present</span>
+                </div>
+                <div class="item-subtitle">Federal University of Agriculture, Abeokuta</div>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">SSCE – WAEC/NECO</span>
+                    <span class="item-meta">2015 – 2021</span>
+                </div>
+                <div class="item-subtitle">De-Zealous Standard College, Lagos</div>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">First Leaving School Certificate</span>
+                    <span class="item-meta">2008 – 2015</span>
+                </div>
+                <div class="item-subtitle">Life Destiny Private School, Lagos</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Intern</span>
+                    <span class="item-meta">Feb 2026 – Present</span>
+                </div>
+                <div class="item-subtitle">Revosmart (Ogun State, On-site)</div>
+                <ul>
+                    <li>Greenhouse construction, installation, and automation</li>
+                    <li>Research and development of agritech solutions</li>
+                    <li><strong>Skills:</strong> Project Management, Metal Fabrication, and more</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">AI and ML Intern</span>
+                    <span class="item-meta">Dec 2025 – Mar 2026</span>
+                </div>
+                <div class="item-subtitle">TechCrush (Remote, Full-time)</div>
+                <ul>
+                    <li>Specialized in AI, Machine Learning, and Data Science</li>
+                    <li>Led capstone project: AARIS-Lite (AI-Driven Academic Records & Intelligence System)</li>
+                    <li>Built ML models achieving 98.7% GPA computation accuracy and 91.3% anomaly detection precision</li>
+                    <li><strong>Skills:</strong> Data Science, Machine Learning, Python</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Electrical Engineer Intern</span>
+                    <span class="item-meta">Jun 2025 – Aug 2025</span>
+                </div>
+                <div class="item-subtitle">Transmission Company of Nigeria</div>
+                <ul>
+                    <li>Gained practical experience in Power Engineering</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Electrical Engineering Apprentice (Vocational)</span>
+                </div>
+                <ul>
+                    <li>Installed and maintained wiring systems</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Key Projects</h2>
+            
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">AARIS-Lite — AI-Driven Academic Records & Intelligence System</span>
+                </div>
+                <div class="item-subtitle">TechCrush ML Track, Cohort 5, Group 12</div>
+                <ul>
+                    <li>Built a lightweight, AI-powered academic records management system for Nigerian universities</li>
+                    <li><strong>Features:</strong> Automated GPA/CGPA computation, performance trend analysis, anomaly detection using Isolation Forest</li>
+                    <li><strong>Dataset:</strong> 10 years of real CS student grades from Zenodo Open Repository (2005–2015)</li>
+                    <li><strong>Results:</strong> 98.7% GPA accuracy, 91.3% anomaly precision, 89.6% trend recall</li>
+                    <li><strong>Technologies:</strong> Python, Isolation Forest, Time-series analysis, Z-score detection</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Robotic Arm</span>
+                </div>
+                <ul>
+                    <li>Developed a servo-controlled robotic arm using ESP microcontroller for automated pick-and-place tasks</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Water Level Indicator</span>
+                </div>
+                <ul>
+                    <li>Designed a sensor-based alert system using LEDs and buzzers for water tank monitoring</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Error Detection & Correction System</span>
+                </div>
+                <ul>
+                    <li>Created a parity-based logic circuit for digital transmission accuracy simulation</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">SCR-Based Motor Speed Control</span>
+                </div>
+                <ul>
+                    <li>Implemented AC motor speed control using Silicon Controlled Rectifier for basic automation</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certifications</h2>
+            <div class="item">
+                <p class="skill-item"><strong>TechCrush 15-Week Bootcamp Scholarship (Beginners) in Artificial Intelligence</strong> — Completed March 28, 2026. Accredited by the American Council of Training and Development, USA. Unique ID: TEC-5A5294CD</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><strong>Hardware:</strong> Microcontroller Programming (Arduino, ESP8266), Circuit Design & Electronics Troubleshooting, Electrical Wiring & Power Systems, Robotics & Embedded Systems</div>
+                <div class="skill-item"><strong>Software:</strong> Python, C/C++, Machine Learning (Isolation Forest, Time-series), Data Science, AI</div>
+                <div class="skill-item"><strong>Engineering:</strong> Project Management, Metal Fabrication, Greenhouse Automation, Power Engineering</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Activities & Interests</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li style="position: relative; padding-left: 1rem; margin-bottom: 0.25rem; font-size: 0.9rem; color: var(--text-gray);"><span style="position: absolute; left: 0; color: var(--accent-teal);">▹</span> Member, Google Developer Group (GDG), FUNAAB</li>
+                <li style="position: relative; padding-left: 1rem; margin-bottom: 0.25rem; font-size: 0.9rem; color: var(--text-gray);"><span style="position: absolute; left: 0; color: var(--accent-teal);">▹</span> Reading, Programming, Hardware projects, Tech and psychology videos</li>
+            </ul>
+        </section>
+
+    </div>
+
+</body>
+</html>
