@@ -67,7 +67,7 @@ TECHNICAL SKILLS:
 - Engineering: Electrical Wiring, Power Systems, Metal Fabrication, Project Management
 
 CERTIFICATIONS:
-- TechCrush Certificate of Completion in Artificial Intelligence (March 2026, ID: TEC-5A5294CD)
+- TechCrush Certificate of Completion in Artificial Intelligence (March 2026)
 
 EDUCATION:
 - B.Sc. Mechatronics Engineering, FUNAAB (2023–Present)
