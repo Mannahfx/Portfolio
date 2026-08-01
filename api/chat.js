@@ -39,7 +39,7 @@ WORK EXPERIENCE:
 
 2. AI & ML Intern at TechCrush (Dec 2025 – Mar 2026, Remote)
    - Completed 15-week AI Bootcamp Scholarship (accredited by ACTD, USA)
-   - Led capstone project AARIS-Lite achieving 98.7% GPA accuracy
+   - Led capstone project AARIS-Lite
    - Skills: Python, Machine Learning, Data Science, Isolation Forest
 
 3. Electrical Engineer Intern at Transmission Company of Nigeria (Jun – Aug 2025)
@@ -53,7 +53,7 @@ KEY PROJECTS:
    - AI-powered system for Nigerian universities
    - Automates GPA/CGPA computation, trend analysis, anomaly detection
    - Uses Isolation Forest, Z-score detection, time-series analysis
-   - Results: 98.7% GPA accuracy, 91.3% anomaly precision, 89.6% trend recall
+   - Live Demo: https://aaris-lite-fdcj4zjtuhwsbnpfxdhfjz.streamlit.app/
    - Built on 10 years of real student data from Zenodo
 
 2. Robotic Arm — Servo-controlled via ESP microcontroller for pick-and-place tasks
