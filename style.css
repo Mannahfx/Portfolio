@@ -408,6 +408,12 @@ section {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  animation: ringRotateReverse 8s linear infinite;
+}
+
+@keyframes ringRotateReverse {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(-360deg); }
 }
 
 .profile-initials {
@@ -423,6 +429,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 /* ==============================
