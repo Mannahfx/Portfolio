@@ -40,7 +40,7 @@ WORK EXPERIENCE:
 2. AI & ML Intern at TechCrush (Dec 2025 – Mar 2026, Remote)
    - Completed 15-week AI Bootcamp Scholarship (accredited by ACTD, USA)
    - Led capstone project AARIS-Lite
-   - Skills: Python, Machine Learning, Data Science
+   - Skills: Python, Machine Learning, Data Science, Data Analysis
 
 3. Electrical Engineer Intern at Transmission Company of Nigeria (Jun – Aug 2025)
    - Power engineering and transmission infrastructure
@@ -63,7 +63,7 @@ KEY PROJECTS:
 
 TECHNICAL SKILLS:
 - Hardware: Arduino, ESP8266, Circuit Design, Robotics, Embedded Systems, IoT
-- Software: Python, C/C++, Machine Learning, Data Science
+- Software: Python, C/C++, Machine Learning, Data Science, Data Analysis
 - Engineering: Electrical Wiring, Power Systems, Metal Fabrication, Project Management
 
 CERTIFICATIONS:
