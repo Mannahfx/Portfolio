@@ -66,8 +66,9 @@ TECHNICAL SKILLS:
 - Software: Python, C/C++, Machine Learning, Data Science, Data Analysis
 - Engineering: Electrical Wiring, Power Systems, Metal Fabrication, Project Management
 
-CERTIFICATIONS:
+CERTIFICATIONS & AWARDS:
 - TechCrush Certificate of Completion in Artificial Intelligence (March 2026)
+- FMN Prize for Innovation 5.0 — Top Finalist (Category 2)
 
 EDUCATION:
 - B.Sc. Mechatronics Engineering, FUNAAB (2023–Present)
