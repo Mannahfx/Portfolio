@@ -66,7 +66,7 @@ EDUCATION:
 
 CONTACT:
 - Email: paulescapemeetings@gmail.com
-- Phone: 08101773538, 07016172429
+- Phone: 08101773538
 - LinkedIn: linkedin.com/in/oluwayinka-olayinka-b047b7289
 
 INSTRUCTIONS:
