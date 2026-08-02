@@ -60,6 +60,7 @@ KEY PROJECTS:
 3. Water Level Indicator — Sensor-based alert system with LEDs and buzzers
 4. Error Detection & Correction — Parity-based logic circuit for transmission accuracy
 5. SCR Motor Speed Control — AC motor speed control using Silicon Controlled Rectifier
+6. IoT-Controlled Lawn Mower — Built a lawn mower controlled using IoT for automated and remote landscaping operations
 
 TECHNICAL SKILLS:
 - Hardware: Arduino, ESP8266, Circuit Design, Robotics, Embedded Systems, IoT
