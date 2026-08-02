@@ -1,7 +1,7 @@
 // ==========================================
 // SMOOTH SCROLL NAVIGATION
 // ==========================================
-function scrollTo(selector) {
+function scrollToSection(selector) {
   const el = document.querySelector(selector);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
@@ -28,6 +28,26 @@ function toggleMobileNav() {
     links.style.boxShadow = '0 12px 40px rgba(0,0,0,0.5)';
   }
 }
+
+// Close mobile nav when clicking outside or clicking a link
+document.addEventListener('click', (e) => {
+  const links = document.querySelector('.nav-links');
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  if (links && links.style.display === 'flex' && links.style.flexDirection === 'column') {
+    if (!links.contains(e.target) && !menuBtn.contains(e.target)) {
+      links.style.display = 'none';
+    }
+  }
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    const links = document.querySelector('.nav-links');
+    if (links && links.style.display === 'flex' && links.style.flexDirection === 'column') {
+      links.style.display = 'none';
+    }
+  });
+});
 
 // Active nav link based on scroll position
 function updateActiveNav() {
