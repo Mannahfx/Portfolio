@@ -174,19 +174,7 @@ function applySuggestion(text) {
 // ==========================================
 // CONTACT FORM
 // ==========================================
-function handleContactSubmit(event) {
-  event.preventDefault();
 
-  const name = document.getElementById('user-name').value;
-  const email = document.getElementById('user-email').value;
-  const area = document.getElementById('interest-area').value;
-  const message = document.getElementById('user-message').value;
-
-  // Show confirmation (in production, connect this to a backend or email service)
-  alert(`Thank you, ${name}! Your message about "${area}" has been received. I'll get back to you at ${email} soon.`);
-
-  document.getElementById('contact-form').reset();
-}
 
 // ==========================================
 // INITIALIZATION

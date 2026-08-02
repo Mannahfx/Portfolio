@@ -638,21 +638,26 @@
         </div>
 
         <div class="glass-card contact-form-card">
-          <form id="contact-form" onsubmit="handleContactSubmit(event)">
+          <form id="contact-form" action="https://formsubmit.co/olayinkapaul720@gmail.com" method="POST">
+            <!-- FormSubmit Configurations -->
+            <input type="hidden" name="_subject" value="New Contact from Portfolio!">
+            <input type="hidden" name="_next" value="https://mannahfx.github.io/Portfolio/">
+            <input type="hidden" name="_captcha" value="false">
+
             <div class="form-row">
               <div class="form-group">
                 <label for="user-name">Your Name</label>
-                <input type="text" id="user-name" required placeholder="e.g. John Doe">
+                <input type="text" id="user-name" name="name" required placeholder="e.g. John Doe">
               </div>
               <div class="form-group">
                 <label for="user-email">Your Email</label>
-                <input type="email" id="user-email" required placeholder="e.g. john@company.com">
+                <input type="email" id="user-email" name="email" required placeholder="e.g. john@company.com">
               </div>
             </div>
 
             <div class="form-group">
               <label for="interest-area">Interest Area</label>
-              <select id="interest-area" required>
+              <select id="interest-area" name="interest-area" required>
                 <option value="" disabled selected>Select an area...</option>
                 <option value="robotics">Robotics & Embedded Systems</option>
                 <option value="ai">AI & Machine Learning</option>
@@ -664,7 +669,7 @@
 
             <div class="form-group">
               <label for="user-message">Your Message</label>
-              <textarea id="user-message" rows="4" required placeholder="Tell me about your project or opportunity..."></textarea>
+              <textarea id="user-message" name="message" rows="4" required placeholder="Tell me about your project or opportunity..."></textarea>
             </div>
 
             <button type="submit" class="submit-btn">Send Message</button>
