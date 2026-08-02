@@ -161,6 +161,9 @@ async function sendChat() {
   const text = input.value.trim();
   if (!text) return;
 
+  // Prevent double submissions while waiting
+  input.disabled = true;
+
   addMessage('user', text);
   input.value = '';
 
@@ -180,6 +183,9 @@ async function sendChat() {
     if (typing) typing.remove();
     addMessage('ai', '⚠️ Could not connect to the AI backend. Please try again later or reach out via the contact form.');
     console.error(err);
+  } finally {
+    input.disabled = false;
+    input.focus();
   }
 }
 

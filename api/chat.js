@@ -1,5 +1,33 @@
+// In-memory store for rate limiting (resets when Vercel serverless function spins down)
+const rateLimitMap = new Map();
+
 export default async function handler(req, res) {
   try {
+    // Basic IP-based Rate Limiting
+    const ip = req.headers['x-forwarded-for'] || req.socket?.remoteAddress || 'unknown';
+    const now = Date.now();
+    const windowMs = 15 * 60 * 1000; // 15 minutes window
+    const maxRequests = 10; // Max 10 messages per 15 minutes per IP
+
+    if (ip !== 'unknown') {
+      const userRecord = rateLimitMap.get(ip) || { count: 0, startTime: now };
+      
+      // Reset count if the time window has passed
+      if (now - userRecord.startTime > windowMs) {
+        userRecord.count = 0;
+        userRecord.startTime = now;
+      }
+      
+      userRecord.count++;
+      rateLimitMap.set(ip, userRecord);
+
+      // Block if they exceed the limit
+      if (userRecord.count > maxRequests) {
+        return res.status(429).json({
+          reply: "You've reached the message limit (10 messages per 15 minutes). Please wait a few minutes before chatting again!"
+        });
+      }
+    }
 
     const { message } = req.body;
 
