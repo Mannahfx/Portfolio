@@ -9,20 +9,7 @@ export default async function handler(req, res) {
       });
     }
 
-    const response = await fetch(
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=" + process.env.GEMINI_API_KEY,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          contents: [
-            {
-              parts: [
-                {
-                  text: `
-You are a friendly, professional AI assistant representing Oluwayinka Olayinka Paul's personal portfolio.
+    const systemPrompt = `You are a friendly, professional AI assistant representing Oluwayinka Olayinka Paul's personal portfolio.
 
 Here is Oluwayinka's complete profile — use this to answer visitor questions:
 
@@ -56,11 +43,14 @@ KEY PROJECTS:
    - Live Demo: https://aaris-lite-fdcj4zjtuhwsbnpfxdhfjz.streamlit.app/
    - Built on 10 years of real student data from Zenodo
 
-2. Robotic Arm — Servo-controlled via ESP microcontroller for pick-and-place tasks
-3. Water Level Indicator — Sensor-based alert system with LEDs and buzzers
-4. Error Detection & Correction — Parity-based logic circuit for transmission accuracy
-5. SCR Motor Speed Control — AC motor speed control using Silicon Controlled Rectifier
-6. IoT-Controlled Lawn Mower — Built a lawn mower controlled using IoT for automated and remote landscaping operations
+2. Cassava Doctor — AI-powered crop disease detection app
+   - Live Demo: https://fmn-argrisense.vercel.app/
+
+3. Robotic Arm — Servo-controlled via ESP microcontroller for pick-and-place tasks
+4. Water Level Indicator — Sensor-based alert system with LEDs and buzzers
+5. Error Detection & Correction — Parity-based logic circuit for transmission accuracy
+6. SCR Motor Speed Control — AC motor speed control using Silicon Controlled Rectifier
+7. IoT-Controlled Lawn Mower — Built a lawn mower controlled using IoT for automated and remote landscaping operations
 
 TECHNICAL SKILLS:
 - Hardware: Arduino, ESP8266, Circuit Design, Robotics, Embedded Systems, IoT
@@ -84,15 +74,24 @@ INSTRUCTIONS:
 - Answer questions about Oluwayinka's background, projects, and skills
 - If asked about availability, say he's open to internships, freelance work, and collaborations
 - Guide visitors to the contact form at the bottom of the page for inquiries
-- Keep responses concise but informative
+- Keep responses concise but informative`;
 
-User Question:
-${message}
-                  `
-                }
-              ]
-            }
-          ]
+    const response = await fetch(
+      "https://api.groq.com/openai/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer " + process.env.GROQ_API_KEY
+        },
+        body: JSON.stringify({
+          model: "llama-3.1-8b-instant",
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: message }
+          ],
+          max_tokens: 512,
+          temperature: 0.7
         })
       }
     );
@@ -108,7 +107,7 @@ ${message}
     }
 
     const reply =
-      data.candidates?.[0]?.content?.parts?.[0]?.text ||
+      data.choices?.[0]?.message?.content ||
       "Sorry, I couldn't generate a response.";
 
     res.status(200).json({ reply });
